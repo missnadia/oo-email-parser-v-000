@@ -12,14 +12,10 @@ class EmailParser
     @@CSV_emails << @emails
   end
 
-  def self.CSV_emails
-    @@CSV_emails.uniq
-  end
-
   def parse
     @@CSV_emails.each do |emails|
-      emails.split(", ")
+      emails.split(", ", " ")
+      emails.uniq
     end
   end
-
 end
