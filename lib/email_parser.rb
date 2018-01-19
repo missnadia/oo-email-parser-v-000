@@ -5,11 +5,9 @@
 
 class EmailParser
   attr_reader :emails
-  @@CSV_emails = []
 
   def initialize(emails)
     @emails = emails
-    @@CSV_emails << @emails
   end
 
   def parse
