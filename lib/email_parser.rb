@@ -9,12 +9,16 @@ class EmailParser
 
   def initialize(emails)
     @emails = emails
-    @@CSV_emails << @emails unless @@CSV_emails.include?(emails)
+    @@CSV_emails << @emails
+  end
+
+  def self.CSV_emails
+    @@CSV_emails.uniq
   end
 
   def parse
     @@CSV_emails.each do |emails|
-      emails
+      emails.split(", ")
     end
   end
 
