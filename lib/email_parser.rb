@@ -15,7 +15,7 @@ class EmailParser
   def parse
     @@CSV_emails.each do |emails|
       emails.split(", ", " ")
-      emails.flatten.uniq
     end
+    emails.flatten.uniq
   end
 end
