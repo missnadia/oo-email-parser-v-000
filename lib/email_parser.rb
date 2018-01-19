@@ -4,5 +4,18 @@
 # or whitespace (' ').
 
 class EmailParser
+  attr_accessor :emails
+  @@CSV_emails = []
+
+  def initialize(emails)
+    @emails = emails
+    @@CSV_emails << @emails unless @@CSV_emails.include?(emails)
+  end
+
+  def parse
+    @@CSV_emails.each do |emails|
+      emails
+    end
+  end
 
 end
